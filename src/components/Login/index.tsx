@@ -21,7 +21,7 @@ const Login = () => {
     const handleSubmit = (event: React.ChangeEvent<HTMLFormElement>) => {
         event.preventDefault();
         if(form.userName === USERNAME && form.password === PASSWORD){
-            navigate("/content");
+            navigate("/dogs");
         } else {
             alert("Incorrect credentials");
         }
@@ -29,7 +29,7 @@ const Login = () => {
 
     return (
         <Fragment>
-            <form onSubmit={handleSubmit}>
+            <form onSubmit={handleSubmit}>                
                 <div>
                     <label htmlFor="username">User name: </label>
                     <input id="userName" type="text" onChange={handleChange}/>

@@ -4,7 +4,7 @@ const Header = () => {
     return (
         <Fragment>
             <header>
-                <h1>Cats or Dogs</h1>
+                <h1>Dogs</h1>
             </header>
         </Fragment>
     )
