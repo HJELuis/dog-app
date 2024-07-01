@@ -1,11 +1,12 @@
 import React, {Fragment} from "react";
+import { AppHeader, Headlight } from "./styles";
 
 const Header = () => {
     return (
         <Fragment>
-            <header>
-                <h1>Dogs</h1>
-            </header>
+            <AppHeader>
+                <Headlight>Dogs</Headlight>
+            </AppHeader>
         </Fragment>
     )
 }
