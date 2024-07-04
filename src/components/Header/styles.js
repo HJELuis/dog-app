@@ -1,9 +1,8 @@
 import styled from "styled-components";
 
-const AppHeader = styled.header`
-    background-color: #EF9C66;
+const AppHeader = styled.header`    
     font-size: 1.5em;
-    color: #FFFFFF;    
+    color: #F0F0F0;   
 `
 
 const Headlight = styled.h1`
