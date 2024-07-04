@@ -1,6 +1,7 @@
 
 import React, { Fragment} from "react";
 import useFetchDogs from "../../hooks/useFetchDogs";
+import { DogElement, DogInfo, DogPicture, DogsSection } from "./styles";
 
 type Dog = {
     id: number;
@@ -21,15 +22,19 @@ const DogsList = () => {
 
     const displayContent = () => {
         return (error === true ? <p>There was an error</p>:
-            dogs.map(dog => {
-                return (
-                    <article key={dog.id}>
-                        <img alt={dog.name} src={`https://cdn2.thedogapi.com/images/${dog.reference_image_id}.jpg`}></img>
-                        <p>Breed:{dog.name} </p>
-                        <p>Temperaments: {dog.temperament}</p>
-                    </article>
-                )
-            })
+            <DogsSection>
+                {
+                    dogs.map(dog => {
+                        return (
+                            <DogElement key={dog.id}>
+                                <DogPicture alt={dog.name} src={`https://cdn2.thedogapi.com/images/${dog.reference_image_id}.jpg`}></DogPicture>
+                                <DogInfo><span>Breed:</span> {dog.name} </DogInfo>
+                                <DogInfo><span>Temperaments:</span> {dog.temperament}</DogInfo>
+                            </DogElement>
+                        )
+                    })
+                }                
+            </DogsSection>
          )
     }
 

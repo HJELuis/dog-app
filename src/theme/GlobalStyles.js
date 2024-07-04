@@ -5,7 +5,7 @@ const GlobalStyle = createGlobalStyle`
         margin: 0;              
     } 
     header {
-        background-color: ${props => props.theme.colors.first};
+        background-color: ${props => props.theme.colors.fourth};
     }   
 `
 
